@@ -30,8 +30,16 @@ class Comments extends Component {
             <ul>
               {items.map(item => (
                   <li key={item.id}>
+
+                    <div className="avatar">
+                        <img alt='doug' src="http://www.croop.cl/UI/twitter/images/doug.jpg" />
+                    </div>
+
                     Email: {item.email} <br />
                     body: {item.body}  
+
+
+
                   </li>
               ))};
             </ul>
