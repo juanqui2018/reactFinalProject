@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+
+
 const CommentsComponent = ({comments }) => {
          return(
           <div className="Comments">

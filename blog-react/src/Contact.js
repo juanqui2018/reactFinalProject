@@ -30,40 +30,45 @@ class Contact extends Component {
     const { username, email, phone, website } = this.state.author;
     const { name } = this.state.company;
     return (
-      <Segment>
-        <div className="ui form">
-          <div className="two fields">
-            <div className="field">
-              <label>Username</label>
-              <input placeholder={username} readOnly="" type="text" />
-            </div>
-            <div className="field">
-              <label>Email</label>
-              <input placeholder={email} readOnly="" type="text" />
-            </div>
-          </div>
-        </div>
-        <div className="ui form">
-          <div className="two fields">
-            <div className="field">
-              <label>Phone</label>
-              <input placeholder={phone} readOnly="" type="text" />
-            </div>
-            <div className="field">
-              <label>Website</label>
-              <input placeholder={website} readOnly="" type="text" />
-            </div>
-          </div>
-        </div>
-        <div className="ui form">
-          <div className="two fields">
-            <div className="field">
-              <label>Company</label>
-              <input placeholder={name} readOnly="" type="text" />
-            </div>
-          </div>
-        </div>
-      </Segment>
+
+      <div>
+        <label>Atuhor:  {username} </label>
+              <Segment>
+              <div className="ui form">
+                <div className="two fields">
+                  <div className="field">
+                    <label>Username</label>
+                    <input placeholder={username} readOnly="" type="text" />
+                  </div>
+                  <div className="field">
+                    <label>Email</label>
+                    <input placeholder={email} readOnly="" type="text" />
+                  </div>
+                </div>
+              </div>
+              <div className="ui form">
+                <div className="two fields">
+                  <div className="field">
+                    <label>Phone</label>
+                    <input placeholder={phone} readOnly="" type="text" />
+                  </div>
+                  <div className="field">
+                    <label>Website</label>
+                    <input placeholder={website} readOnly="" type="text" />
+                  </div>
+                </div>
+              </div>
+              <div className="ui form">
+                <div className="two fields">
+                  <div className="field">
+                    <label>Company</label>
+                    <input placeholder={name} readOnly="" type="text" />
+                  </div>
+                </div>
+              </div>
+            </Segment>
+      </div>
+      
     );
   }
 }
