@@ -11,7 +11,7 @@ class Main extends Component {
   render() {
     return (
         <HashRouter>
-            <div>
+            <div >
             <h1>Proyecto Final React</h1>
             <ul className="header">
                 <li><NavLink exact to="/">Home</NavLink></li>

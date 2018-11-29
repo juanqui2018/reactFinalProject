@@ -7,9 +7,9 @@ const CommentsComponent = ({comments }) => {
               {comments.map(item => (
                   <li key={item.id}>
                     Email: {item.email} <br />
-                    body: {item.body}  
+                    Body: {item.body}  
                   </li>
-              ))};
+              ))}
             </ul>
           </div>
       );

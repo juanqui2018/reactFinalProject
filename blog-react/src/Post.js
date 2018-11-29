@@ -6,8 +6,8 @@ const PostComponent = ({post }) => {
       <div className="PostComponent">
         <ul>
           { JSON.stringify(post) !== '{}' ? <li key={post.id}>
-              Email: {post.title} <br />
-              body: {post.body}  
+              Title: {post.title} <br />
+                     {post.body}  
             </li> : null
           }
         </ul>
