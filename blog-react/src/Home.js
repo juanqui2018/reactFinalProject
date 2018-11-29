@@ -54,9 +54,8 @@ class Home extends Component {
     this.loadPosts();
   }
   getValue(target){
-    // console.log('aaaaaaa', target);
+    console.log('target:', target);
     this.loadSinglePost(target);
-    
   }
 
   idValueFunction = valor => {
