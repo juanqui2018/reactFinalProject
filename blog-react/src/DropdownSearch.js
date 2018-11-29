@@ -2,10 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Dropdown } from "semantic-ui-react";
 
-const onChangeHadler = (getValue, {target} ) => {
-  console.log('child',target);
-  getValue(target);
-}
+// const onChangeHadler = (getValue, {target} ) => {
+//   console.log('child',target);
+//   getValue(target);
+// }
+const onChangeHandler = (getValue, event, {value}) => getValue(value);
 
 const DropdownSearch = ({ posts, getValue }) => (
   <Dropdown
@@ -13,7 +14,8 @@ const DropdownSearch = ({ posts, getValue }) => (
     search
     selection
     options={posts}
-    onChange={onChangeHadler.bind({}, getValue)}
+    onChange={onChangeHandler.bind({}, getValue)}
+   
   />
 );
 
