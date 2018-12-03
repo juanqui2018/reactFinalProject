@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import PostComponent from "./Post";
 import DropdownSearch from "./DropdownSearch";
 import CommentsComponent from './Comments';
-//[ { key: 'AL', value: 'AL', text: 'Alabama' }, ...  ]
+
 class Home extends Component {
   constructor() {
     super();
-    this.state = { posts: [], post: {}, comments: []};
+    this.state = { posts: [], post: {}, comments: null  };
     this.getValue = this.getValue.bind(this);
   }
 
@@ -22,7 +22,6 @@ class Home extends Component {
           body
         }));
         this.setState({ posts: aux });
-        console.log(this.state.posts);
       });
   }
 
@@ -34,7 +33,6 @@ class Home extends Component {
           post
         });
         this.loadComments(this.state.post.id);
-        console.log(this.state.post);
       });
   }
 
@@ -45,16 +43,14 @@ class Home extends Component {
       this.setState({
         comments
       });
-      
-      console.log('comment:', this.state.comments);
     });
   }
 
   componentDidMount() {
     this.loadPosts();
   }
+
   getValue(target){
-    console.log('target:', target);
     this.loadSinglePost(target);
   }
 
@@ -64,13 +60,12 @@ class Home extends Component {
     })
   };
 
-
   render() {
     return (
       <div>
-        <DropdownSearch posts={this.state.posts} getValue={this.getValue} returnIdValue={this.idValueFunction}/>
+        <DropdownSearch  posts={this.state.posts} getValue={this.getValue} returnIdValue={this.idValueFunction}/>
         <PostComponent post={this.state.post}/>
-        <CommentsComponent comments={this.state.comments}/>
+        { this.state.comments && (<CommentsComponent comments={this.state.comments}/>)}
       </div>
     );
   }

@@ -9,7 +9,6 @@ class Contact extends Component {
       author: {},
       company: {}
     };
-    console.log("authorId:", this.state.authorId);
   }
   componentDidMount() {
     this.getAuthorById(this.state.authorId);
@@ -22,7 +21,6 @@ class Contact extends Component {
           author,
           company: author.company
         });
-        console.log(this.state.company);
       });
   }
 
@@ -32,7 +30,7 @@ class Contact extends Component {
     return (
 
       <div>
-        <label>Atuhor:  {username} </label>
+        <h1>Atuhor:  {username} </h1>
               <Segment>
               <div className="ui form">
                 <div className="two fields">
@@ -68,7 +66,6 @@ class Contact extends Component {
               </div>
             </Segment>
       </div>
-      
     );
   }
 }

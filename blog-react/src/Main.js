@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-
 import {
     Route,
     NavLink,
     HashRouter
   } from "react-router-dom";
-  import Home from "./Home";
-  import Contact from "./Contact";
+import Home from "./Home";
+import Contact from "./Contact";
  
 class Main extends Component {
   render() {
@@ -16,7 +15,6 @@ class Main extends Component {
             <h1>Proyecto Final React</h1>
             <ul className="header">
                 <li><NavLink exact to="/">Home</NavLink></li>
-               
             </ul>
             <div className="content">
                 <Route exact  path="/" component={Home}/>
